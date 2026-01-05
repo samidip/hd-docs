@@ -11,6 +11,55 @@ If you encounter a problem not listed here, please [file a bug report](https://g
 
 ### All Platforms
 
+#### Configuring Automatic Hot Design Launch for Automation
+
+- **Description:** By default, Hot Design launches automatically in Debug mode. For CI, App MCP, and other automation scenarios, this behavior needs to be disabled.
+- **Solution:** You can control launch behavior using either an environment variable or an MSBuild property. When set, these take precedence over the `launchHotDesignOnStart` parameter in code.
+
+  **Option 1: Environment Variable** (highest priority, set at runtime)
+  
+  Set the environment variable `UNO_HOTDESIGN_LAUNCH` to control launch behavior. Set it to `false` or `0` to disable automatic launch, or `true` or `1` to enable it.
+  
+  ```bash
+  # Disable automatic launch (recommended for automation)
+  # On Windows (PowerShell)
+  $env:UNO_HOTDESIGN_LAUNCH = "false"
+  
+  # On Windows (Command Prompt)
+  set UNO_HOTDESIGN_LAUNCH=false
+  
+  # On macOS/Linux
+  export UNO_HOTDESIGN_LAUNCH=false
+  
+  # Enable automatic launch
+  export UNO_HOTDESIGN_LAUNCH=true  # or "1"
+  ```
+
+  **Option 2: MSBuild Property** (set in project file)
+  
+  Add the `UnoHotDesignLaunch` property to your project file (`.csproj`):
+  
+  ```xml
+  <PropertyGroup>
+    <!-- Disable Hot Design automatic launch -->
+    <UnoHotDesignLaunch>false</UnoHotDesignLaunch>
+  </PropertyGroup>
+  ```
+  
+  Or enable it:
+  
+  ```xml
+  <PropertyGroup>
+    <!-- Enable Hot Design automatic launch -->
+    <UnoHotDesignLaunch>true</UnoHotDesignLaunch>
+  </PropertyGroup>
+  ```
+
+  **Priority Order:**
+  1. Environment variable `UNO_HOTDESIGN_LAUNCH` (highest priority)
+  2. MSBuild property `UnoHotDesignLaunch`
+  3. Code parameter `launchHotDesignOnStart` in `UseStudio()` call
+
 #### Multi-Window Support Unavailable
 
 - **Description:** Hot Design does not currently support multiple windows.
