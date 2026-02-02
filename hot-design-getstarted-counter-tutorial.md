@@ -17,7 +17,7 @@ This tutorial will guide you through using Hot Design to create a simple counter
 
 ## Before You Begin
 
-This tutorial uses the [XAML + MVUX variant](xref:Uno.Workshop.Counter.XAML.MVUX). You can switch to MVVM by using [this version](xref:Uno.Workshop.Counter.XAML.MVVM) if desired. Explore other tutorial variants [here](xref:Uno.Workshop.Counter).
+This tutorial uses the [XAML + MVUX variant](xref:Uno.Workshop.Counter.XAML.MVUX). You can switch to MVVM by using [the MVVM variant](xref:Uno.Workshop.Counter.XAML.MVVM) if desired. Explore other tutorial variants in the [Counter Workshop variants](xref:Uno.Workshop.Counter).
 
 Make sure:
 
@@ -68,7 +68,7 @@ The template will create a solution with a single cross-platform project, named 
 
 ### [VS Code](#tab/vscode)
 
-- Launch The Live Wizard by clicking [here](https://new.platform.uno/)
+- Launch The Live Wizard by clicking [the Uno Platform app wizard](https://new.platform.uno/)
 - Name the project `Counter` and click **Start**
 - Select **Blank** in **Presets** selection
 - Select the **Presentation** tab and choose **MVUX**
@@ -101,7 +101,7 @@ This will create a new folder called **Counter** containing the new application.
 
 ## Assets
 
-First, we need to add the image file to the application. Download this [SVG image](https://aka.platform.uno/counter-tutorial-svg-uno-logo) (Open this [link](https://aka.platform.uno/counter-tutorial-svg-uno-logo), right-click on the SVG image and select "Save as") and add it to the **Assets** folder. Once added, rebuild the application to ensure the image is included in the application package.
+First, we need to add the image file to the application. Download this [SVG image](https://aka.platform.uno/counter-tutorial-svg-uno-logo) (Open the [Uno logo SVG download link](https://aka.platform.uno/counter-tutorial-svg-uno-logo), right-click on the SVG image and select "Save as") and add it to the **Assets** folder. Once added, rebuild the application to ensure the image is included in the application package.
 
 > [!NOTE]
 > If you're working in Visual Studio, select the newly added **logo.svg** file in the **Solution Explorer**, open the **Properties** panel, and ensure the **Build Action** property is set to **`UnoImage`**. For other IDEs, no further action is required as the template automatically sets the **Build Action** to **`UnoImage`** for all files in the **Assets** folder.
