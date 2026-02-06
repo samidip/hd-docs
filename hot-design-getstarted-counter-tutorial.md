@@ -172,7 +172,7 @@ When making changes via **Hot Design**, the XAML will automatically update to re
 
     ![Image Source](Assets/4-add-image-source.gif)
 
-1. Now, let's edit some properties to enhance its appearance. In the **Properties** panel, use the search button to find properties. Search for "Width" and set its value to **150**. Do the same for `Height`. Our `Image` element is now complete!
+1. Now, let's edit some properties to enhance its appearance. In the **Properties** panel, use the search button to find properties. Search for "Width" and set its value to **400**. Do the same for `Height`. Our `Image` element is now complete!
 
     ![Image](Assets/4.1-search-properties.gif)
 
