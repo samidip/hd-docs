@@ -10,7 +10,7 @@ The Properties panel uses different types of editors depending on the property�
 
 For properties with predefined values, like `Visibility`, you’ll see a dropdown. Click it to open the list and select the value you want.
 
-<img src="Assets/properties-editors-dropdown.gif" height="600" alt="GIF showing how to set values on a dropdown on the Properties panel" />
+<img src="Assets/properties-editors-dropdown.gif" alt="GIF showing how to set values on a dropdown on the Properties panel" />
 
 ## TextField
 
@@ -32,7 +32,7 @@ For boolean properties (true or false), a checkbox is used. Click it to toggle b
 
 For properties that accept multiple values, simply click on the label showing the current selection. A menu will appear listing the available options—check the ones you want, and click outside the menu to close it.
 
-<img src="Assets/properties-editors-multi-selection.gif" height="600" alt="GIF showing how to set values on a multi selection field on the Properties panel" />
+<img src="Assets/properties-editors-multi-selection.png" alt="Screenshot showing a multi selection field on the Properties panel" />
 
 ## Alignment Editors
 

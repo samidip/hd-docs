@@ -12,7 +12,7 @@ Whether you're adding a button, creating a layout with a `Grid`, or inserting a 
 
 At the top of the Toolbox, there’s a search box. As you type, the list instantly updates to show matching controls and elements. This helps you locate what you need without scrolling through the full list.
 
-![Search](Assets/toolbox-search.png)
+![Search](Assets/toolbox-search.gif)
 
 ## Browse Controls by Category
 
@@ -27,7 +27,7 @@ When the search box is empty, the Toolbox displays all available controls organi
 
 Click the arrow beside a category name to expand or collapse its contents.
 
-<img src="Assets/toolbox-expand-section.gif" height="400" alt="How to expand and collapse sections in the Toolbox." />
+<img src="Assets/toolbox-expand-section.gif" alt="How to expand and collapse sections in the Toolbox." />
 
 ## Add a Control to the Canvas
 
@@ -36,7 +36,7 @@ To insert a control into your layout in the interactive **Canvas**:
 1. Drag a control from the **Toolbox** panel.
 2. Drop it onto the **Canvas**, inside the element where you want it to appear.
 
-<img src="Assets/toolbox-add-to-canvas.gif" height="600" alt="How to drag and drop an element from the Toolbox panel to the Canvas." />
+<img src="Assets/toolbox-add-to-canvas.gif" alt="How to drag and drop an element from the Toolbox panel to the Canvas." />
 
 ## Add a Control to the Visual Tree
 
@@ -45,7 +45,7 @@ To insert a control into the **Elements** panel:
 1. Drag a control from the **Toolbox** panel.
 2. Drop it into the desired parent node in the visual tree inside the **Elements** panel.
 
-<img src="Assets/toolbox-add-to-tree.gif" height="600" alt="How to drag and drop a control from the Toolbox panel into the Elements panel." />
+<img src="Assets/toolbox-add-to-tree.gif" alt="How to drag and drop a control from the Toolbox panel into the Elements panel." />
 
 ## Insert a Control Using Double-Click
 
@@ -54,7 +54,7 @@ To quickly insert a control:
 1. Select a parent element on the **Canvas** or in the visual tree in the **Elements** panel.
 2. Double-click the wanted new control in the **Toolbox**. It will be added as a child of the previously selected element.
 
-<img src="Assets/toolbox-add-to-tree-double-click.gif" height="600" alt="How to double-click a control in the Toolbox to add it as a child of the parent selected element." />
+<img src="Assets/toolbox-add-to-tree-double-click.gif" alt="How to double-click a control in the Toolbox to add it as a child of the parent selected element." />
 
 ## Next Step
 

@@ -10,7 +10,7 @@ For properties that accept a template-like `ItemTemplate` in an `ItemsRepeater`,
 
 To open the Template Editor, click the **Create** button next to the property in the Properties panel. If a template already exists, the button will say **Edit** instead. Clicking it takes you into the dedicated template editing area.
 
-<img src="Assets/properties-enter-template-editor.gif" height="600" alt="GIF showing how to enter the Template Editor" />
+<img src="Assets/properties-editor-template-editor.png" alt="Screenshot showing how to enter the Template Editor" />
 
 ## Using the Template Editor
 
@@ -26,21 +26,15 @@ From here, you can:
 
 <img src="Assets/properties-using-template-editor.gif" height="600" alt="GIF showing how to use the Template Editor" />
 
-## Leaving the Template Editor
+### Leaving the Template Editor
 
 To exit the template editor and return to the main layout:
 
 - Click the **Back** icon at the top-left of the Canvas area, or
 
-  ![Leave Template Editor through Canvas](Assets/properties-leave-template-editor-window.png)
-
 - Use the **Back** icon in the top-left of the Tree view.
 
-  ![Leave Template Editor through Tree](Assets/properties-leave-template-editor-tree.png)
-
 Once you return, the control’s template will be updated with your changes, and you’ll see them reflected in the main design view.
-
-<img src="Assets/properties-leaving-template-editor.gif" height="600" alt="GIF showing how to leave the Template Editor" />
 
 ## Next Steps
 

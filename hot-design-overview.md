@@ -50,6 +50,30 @@ By simplifying UI development and accelerating your workflow, **Hot Design** hel
 
 **Let’s get started!**
 
+## Core Features & Documentation
+
+### Workspace and Navigation
+
+- **[Scope Selector](xref:Uno.HotDesign.ScopeSelector)** — Navigate and edit UserControls and DataTemplates in isolation
+- **[Toolbar and External Tool Window](xref:Uno.HotDesign.ToolbarExternalWindow)** — Fixed toolbar options, external window mode, and tool layout management
+
+### Design and Elements
+
+- **[Toolbox](xref:Uno.HotDesign.Toolbox)** — Categorized controls and drag-and-drop design
+- **[Elements](xref:Uno.HotDesign.Elements)** — Visual tree structure and hierarchy management
+- **[Canvas](xref:Uno.HotDesign.Canvas)** — Interactive design surface with real-time preview
+- **[Properties](xref:Uno.HotDesign.Properties)** — Smart and advanced property editing
+
+### Chat and AI Features
+
+- **[Hot Design Agent](xref:Uno.HotDesign.Agent)** — AI-powered UI generation and design assistance
+- **[Image Attachment in Chat](xref:Uno.HotDesign.ImageAttachment)** — Attach design mockups and reference images
+
+### Reference
+
+- **[Keyboard Shortcuts](xref:Uno.HotDesign.Shortcuts)** — Quick keyboard navigation and actions
+- **[Troubleshooting](xref:Uno.HotDesign.Troubleshooting)** — Known issues and solutions
+
 ## Next Steps
 
 - **[Get Started Guide](xref:Uno.HotDesign.GetStarted.Guide)**

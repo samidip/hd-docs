@@ -34,7 +34,7 @@ For layout-related properties like `Padding`, `Margin`, `BorderThickness`, and `
 
 When you open the advanced flyout on a `ColumnDefinitions` or `RowDefinitions` property, you get a full table editor. Here’s what you can do:
 
-<img src="Assets/properties‑grid‑definition‑editor.png" height="400" alt="Grid ColumnDefinition Editor" />
+<img src="Assets/properties‑grid‑definition‑editor.png" alt="Grid ColumnDefinition Editor" />
 
 - **Reorder**  
   Drag the ⋮⋮ handle to change the order of your rows/columns.
@@ -83,8 +83,6 @@ Binding allows for a dynamic data connection between your UI and data source. He
 - **Target Null Value**: The value to use when the binding result is `null`.
 
 - **Update Source Trigger**: Controls when the data flows from the UI back to the source. For example, it can be set to update immediately on change or only after focus is lost.
-
-<img src="Assets/properties-flyout-binding-advanced.gif" height="600" alt="GIF showing how to set advanced bindings on the Advanced Flyout" />
 
 ## Resource
 

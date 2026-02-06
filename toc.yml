@@ -2,18 +2,27 @@
   href: xref:Uno.HotDesign.Overview
 - name: Getting Started with Hot Design
   href: xref:Uno.HotDesign.GetStarted.Guide
-- name: Hot Design Agent
+- name: Agent
   href: xref:Uno.HotDesign.Agent
+  items:
+  - name: Hot Design Agent
+    href: xref:Uno.HotDesign.Agent
+  - name: Image Attachment
+    href: xref:Uno.HotDesign.ImageAttachment
 - name: Troubleshooting
   href: xref:Uno.HotDesign.Troubleshooting
 - name: Counter Tutorial
   href: xref:Uno.HotDesign.GetStarted.CounterTutorial
 - name: Toolbar
   href: xref:Uno.HotDesign.Toolbar
+- name: Toolbar External Window
+  href: xref:Uno.HotDesign.ToolbarExternalWindow
 - name: Toolbox
   href: xref:Uno.HotDesign.Toolbox
 - name: Elements
   href: xref:Uno.HotDesign.Elements
+- name: Scope Selector
+  href: xref:Uno.HotDesign.ScopeSelector
 - name: Canvas
   href: xref:Uno.HotDesign.Canvas
 - name: Shortcuts

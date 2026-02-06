@@ -45,7 +45,7 @@ Content controls like `Border` or `Viewbox` can have only one child.
 
 Use the arrow next to a node to collapse or expand it. This helps reduce visual clutter and focus on the part you're actively editing.
 
-<img src="Assets/elements-expandable-sections.gif" height="350" alt="How to expand and collapse nodes in the Elements panel." />
+<img src="Assets/elements-expandable-sections.gif" alt="How to expand and collapse nodes in the Elements panel." />
 
 ## Wrap an Element with a New Parent
 
@@ -57,7 +57,7 @@ To nest an element inside a new container:
 
 This places the selected element inside the new parent and updates the visual tree accordingly.
 
-<img src="Assets/elements-add-parent.gif" height="350" alt="How to add a parent in the Elements panel." />
+<img src="Assets/elements-add-parent.gif" height="400" alt="How to add a parent in the Elements panel." />
 
 ## Jump to an Element’s Parent
 
@@ -68,7 +68,7 @@ To quickly select an element’s parent:
 
 This selects the parent in both the **Elements** panel and the **Canvas**, helping you navigate complex trees.
 
-<img src="Assets/elements-select-parent.gif" height="350" alt="How to select a parent in the Elements panel." />
+<img src="Assets/elements-select-parent.gif" height="400" alt="How to select a parent in the Elements panel." />
 
 ## Delete an Element from the Visual Tree
 
@@ -79,7 +79,7 @@ To remove an element:
 
 The element is immediately removed from the layout and visual tree.
 
-<img src="Assets/elements-delete-element.gif" height="350" alt="How to delete an element in the Elements panel." />
+<img src="Assets/elements-delete-element.gif" height="400" alt="How to delete an element in the Elements panel." />
 
 ## Edit a UserControl from the Visual Tree
 
@@ -107,7 +107,7 @@ The `NavigationBar` control exposes two UI collections in the Elements panel:
 
 2. **Click the +** to open a lite, dismissible flyout listing all compatible element types (e.g. `AppBarButton`, `AppBarSeparator`, `AppBarToggleButton`):
 
-   <img src="Assets/add-nav-commands-flyout.png" height="250" alt="Flyout menu open" />
+   <img src="Assets/add-nav-commands-flyout.png" alt="Flyout menu open" />
 
 3. **Select** a type to insert it at the end of the collection.
 
@@ -123,11 +123,29 @@ The `NavigationBar` control exposes two UI collections in the Elements panel:
 
 If you attempt to drag an element that isn’t valid for a NavigationBar command (for example, a `TextBlock`), you’ll see a “no‑drop” cursor and a teaching tip explaining why.
 
-## Get Help from Teaching Tips
+## Navigate Scopes with Scope Selector
 
-If an element can’t be edited, for example, if it was created entirely in C# with no associated XAML, hovering over it may display a **Teaching Tip**. They offer helpful tips and explain common restrictions.
+At the top of the **Elements** panel, you'll find the **Scope Selector**. This powerful feature lets you zoom into **UserControls** and **DataTemplates** for focused, isolated editing of nested UI contexts.
 
-![Elements Teaching Tip](Assets/elements-teaching-tip.png)
+When you have complex nested structures like custom DataTemplates in ListBoxes or multi-level UserControl hierarchies, the Scope Selector helps you:
+
+- **Zoom into a specific scope** to edit only that context without affecting parent layouts
+- **Navigate the scope tree** to quickly switch between templates, UserControls, and the main application
+- **Keep designs focused** by reducing visual clutter and preventing accidental changes to parent elements
+
+<p align="center">
+  <img src="Assets/scope-selector-default.png" alt="Scope Selector in the Elements panel" />
+</p>
+
+**Example Workflow**: If your page contains a ListBox with a custom DataTemplate:
+
+1. Your **Elements** panel shows the page hierarchy
+2. Click the **Scope Selector** to open the scope tree
+3. Navigate to the **ItemTemplate** scope
+4. Edit the template content (buttons, text, icons) in isolation
+5. Return to **Application Scope** to adjust the ListBox properties
+
+[➜ Learn more about the Scope Selector](xref:Uno.HotDesign.ScopeSelector)
 
 ## Next Step
 
