@@ -16,6 +16,7 @@ Available in Visual Studio 2022/2026, VS Code, Rider, and CLI Agents (e.g., Code
 ## Working with Hot Design<sup>®</sup> Agent
 
 To start using Hot Design<sup>®</sup> Agent, open Hot Design and from the toolbar toggle to **Agent** mode. This will open the Agent pane and allow you to start interacting with the agent.
+
 ![Hot Design Agent Panel Highlighted](Assets/hot-design-agent-view.png)
 
 ### Generating UI
@@ -37,6 +38,6 @@ When the generation is complete, the result is displayed in the Agent pane. From
 3. **Return to a previous version for further refinement**: Choose an earlier version and adjust as needed.
 4. **Start a new design**: Deselect all designs or click **New** to begin fresh.
 
-After applying your design, you’re not done yet! You can either return to **Design Mode** to explore and refine it further, or click <img src="Assets/toolbar-play.png" alt="Play icon" height="30" style="vertical-align:middle; margin-right:6px;" /> **Play** to switch to **Interactive Mode** and test the newly generated design in action. This ensures your design isn’t just static—you can interact with it, validate its behavior, and make adjustments as needed.
+After applying your design, you’re not done yet! You can either return to **Design** mode to explore and refine it further, or switch to **Interactive** mode to test the newly generated design in action. This ensures your design isn’t just static—you can interact with it, validate its behavior, and make adjustments as needed.
 
 ![Hot Design Agent Result](Assets/hot-design-agent-result.png)
