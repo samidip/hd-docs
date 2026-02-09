@@ -271,8 +271,8 @@ Finally, let's bind the **Command** to the `IncrementCounter` task of our ViewMo
 
 ## Wrap Up
 
-At this point, you should have a working counter application. Click the **Play** button in the **Toolbar**, adjust the step size, and click the button to see the application in action.
+At this point, you should have a working counter application. Switch to the **Interactive** mode in the **Toolbar** to see the application in action. To test the app, you can adjust the step size and click the increment button.
 
-The **Play** button lets you interact with the app directly within **Hot Design**, without needing to leave the editor. Once you're done interacting with the application, you can click the **Pause** button to return to designing your application. If you wish to leave Hot Design and return to the running application, you can click the **Flame** button in the **Toolbar**.
+**Interactive** mode lets you interact with the app directly within **Hot Design**, without needing to leave the editor. Once you're done interacting with the application, you can switch back to **Design** mode to return to modifying your application. If you wish to leave Hot Design and return to the running application, you can click the **Flame** button in the **Toolbar**.
 
 ![WrapUp](Assets/9-wrapup.gif)
