@@ -103,8 +103,6 @@ Key toolbar actions include:
 
 - <img src="Assets/toolbar-switch-modes.png" alt="Toggle agent, design and interactive modes icon" />  Toggling between **Agent**, **Design** and **Interactive** modes.
 
-- <img src="Assets/toolbar-play.png" alt="Hot Design Toolbar play icon" height=30  /><img src="Assets/toolbar-pause.png" alt="Hot Design Toolbar pause icon" height=30  />  Playing with the live running app to test functionality and pausing to return to adjusting properties, layout, and other design aspects without leaving the interactive designer.
-
 - <img src="Assets/toolbar-undo.png" alt="Hot Design Toolbar undo icon" height=30  /><img src="Assets/toolbar-redo.png" alt="Hot Design Toolbar redo icon" height=30  />   Undoing and redoing changes.
 
 - <img src="Assets/toolbar-designer-settings-form-factor-icon.png" alt="Hot Design Toolbar form factor icon" height=30  />  Changing the form factor of the app to test different screen sizes.
