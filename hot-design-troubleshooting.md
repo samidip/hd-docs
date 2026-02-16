@@ -39,6 +39,16 @@ If you encounter a problem not listed here, please [file a bug report](https://g
   - Verify that you're using a [supported image format](xref:Uno.HotDesign.ImageAttachment) (.jpg, .jpeg, .png).
   - Close and reopen the Chat panel, then try again.
 
+#### Native Controls Disappear on Hover
+
+- **Description:** Native controls (such as WebView2, MediaPlayerElement, or other platform-native elements) disappear or become invisible when hovering over them with the mouse in Hot Design mode.
+- **Cause:** This occurs when non-empty managed overlays (such as visual adorners shown on hover) are displayed on top of native controls. In this scenario, the native embedding clips the entire native surface (including the control itself), causing the control to become invisible.
+- **Workaround:** This is a known limitation of how native content is clipped when combined with managed overlays. There is currently no direct solution except to:
+  - Avoid hovering over native controls while Hot Design mode is enabled to prevent overlays from being displayed.
+  - Temporarily disable Hot Design mode when working with native controls.
+  - Use alternative non-native controls where possible (e.g., Skia-rendered controls).
+- **Related Issue:** This is the same root cause as [unoplatform/uno#21309](https://github.com/unoplatform/uno/issues/21309).
+
 ## Contributions and Feedback
 
 If you encounter recurring issues or specific scenarios not covered in this guide, please consider the following:
