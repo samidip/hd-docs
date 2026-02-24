@@ -49,6 +49,15 @@ If you encounter a problem not listed here, please [file a bug report](https://g
   - Use alternative non-native controls where possible (e.g., Skia-rendered controls).
 - **Related Issue:** This is the same root cause as [unoplatform/uno#21309](https://github.com/unoplatform/uno/issues/21309).
 
+### Linux / WSL
+
+#### Window Maximize/Restore State Not Preserved
+
+- **Description:** When using Hot Design on Linux or WSL, the window maximize/restore state is not preserved across sessions.
+- **Cause:** The underlying windowing API (`OverlappedPresenter.State`) is not reliable on Linux/WSL and causes a native X11 error when accessed, so Hot Design skips reading it.
+- **Workaround:** Window size is still tracked and preserved. Only the maximize/restore state is not remembered between sessions. You can manually maximize or restore the window each time you activate Hot Design.
+- **Related Issue:** [#6234](https://github.com/unoplatform/uno.hotdesign/issues/6234)
+
 ## Contributions and Feedback
 
 If you encounter recurring issues or specific scenarios not covered in this guide, please consider the following:
