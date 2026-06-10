@@ -16,13 +16,20 @@ Welcome to **Hot Design<sup>®</sup>**, a next-generation runtime visual designe
 
 In addition, [Hot Reload](xref:Uno.Features.HotReload) works seamlessly with **Hot Design**, allowing you to see UI changes instantly without rebuilding your app. This boosts productivity, reduces iteration time, and provides real-time feedback for both visual and functional tweaks in your UI. Hot Reload also includes a visual indicator to help you monitor changes as you develop, further enhancing your workflow.
 
-**Hot Design** is part of the **Uno Platform Studio**, a suite of tools designed to streamline your cross-platform app development and boost productivity.
+**Hot Design** is part of **Uno Platform Studio**, an AI-native productivity suite for building enterprise-grade, cross-platform .NET applications.
+
+With **Uno Platform Studio 3.0**, Hot Design works alongside two new AI-native components:
+
+- **Uno Platform Studio App** — go from a prompt to a working, cross-platform app in minutes, then continue building in your IDE.
+- **Uno Platform Studio Agent** — an orchestration layer that brings deep, cross-platform .NET domain knowledge and 70+ Uno Platform-specific skills to AI models, delivered through the `uno-platform-studio` plugin for Claude Code, GitHub Copilot, and OpenAI Codex.
+
+Together with Hot Reload, Design-to-Code, and the Uno Platform MCPs, these tools streamline your cross-platform development and boost productivity.
 
 [➜ Learn more about Uno Platform Studio](xref:Uno.Platform.Studio.Overview)
 
 ### Key Features
 
-**New in Uno Platform Studio 2.0 is the Hot Design® Agent**. An AI-powered assistant that enables rapid UX/UI creation and enhancement within your application. It leverages data contexts and live previews to help developers design, refine, and interact with user interfaces in real time, using deep knowledge of Uno Platform and your running app to simplify cross-platform .NET design.
+**Hot Design® Agent** is an AI-powered assistant that enables rapid UX/UI creation and enhancement within your application. It leverages data contexts and live previews to help developers design, refine, and interact with user interfaces in real time, using deep knowledge of Uno Platform and your running app to simplify cross-platform .NET design.
 
 To get started with **Hot Design® Agent**, jump to the [Hot Design® Agent](xref:Uno.HotDesign.Agent) page.
 

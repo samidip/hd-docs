@@ -8,7 +8,7 @@ uid: Uno.HotDesign.Agent
 
 The Hot Design<sup>®</sup> Agent is an AI-powered assistant that enables rapid **UX/UI creation and enhancement** within your application. It leverages data contexts and live previews to help developers **design**, **refine**, and **interact with user interfaces in real time**, using deep knowledge of Uno Platform and your running app to simplify cross-platform .NET design.
 
-Available in Visual Studio 2022/2026, VS Code, Rider, and CLI Agents (e.g., Codex, Claude), Hot Design<sup>®</sup> Agent provides a unified human–AI design environment that adapts to your workflow. All actions are transparent, reversible, and run within your preferred IDE for full developer control.
+Available in Visual Studio 2022/2026, VS Code, Rider, and CLI Agents (e.g., OpenAI Codex, Claude Code), Hot Design<sup>®</sup> Agent provides a unified human–AI design environment that adapts to your workflow. All actions are transparent, reversible, and run within your preferred IDE for full developer control.
 
 > [!IMPORTANT]
 > If you are new to Hot Design and would like to learn more about its features and how to set it up, go to the [Hot Design<sup>®</sup> Overview](xref:Uno.HotDesign.Overview) page.

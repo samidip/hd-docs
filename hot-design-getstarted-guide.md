@@ -8,6 +8,13 @@ uid: Uno.HotDesign.GetStarted.Guide
 
 This guide provides the steps to set up Hot Design and introduces its key features and visual design capabilities, helping you start creating and refining user interfaces efficiently and intuitively.
 
+**Hot Design** is part of **Uno Platform Studio**, an AI-native productivity suite for building enterprise-grade, cross-platform .NET applications. With **Uno Platform Studio 3.0**, Hot Design works alongside two new AI-native components:
+
+- **Uno Platform Studio App** — go from a prompt to a working, cross-platform app in minutes, then continue building in your IDE.
+- **Uno Platform Studio Agent** — an orchestration layer that brings deep, cross-platform .NET domain knowledge and 70+ Uno Platform-specific skills to AI models, delivered through the `uno-platform-studio` plugin for Claude Code, GitHub Copilot, and OpenAI Codex.
+
+[➜ Learn more about Uno Platform Studio](xref:Uno.Platform.Studio.Overview)
+
 ## Set Up Your Environment for Hot Design
 
 [!include[hd-important-info](includes/hd-important-info.md)]
@@ -39,14 +46,6 @@ After dismissing the intro, you can choose how to organize **Hot Design** tools:
 To switch between these layouts, click the **Overflow Menu** (three dots) in the toolbar and toggle **Window** > **Show Tools In-App**.
 
 [➜ Learn more about toolbar options and external window](xref:Uno.HotDesign.ToolbarExternalWindow)
-
-## Hot Design<sup>®</sup> Agent
-
-**New in Uno Platform Studio 2.0 is the Hot Design® Agent**. An AI-powered assistant that enables rapid UX/UI creation and enhancement within your application. It leverages data contexts and live previews to help developers design, refine, and interact with user interfaces in real time, using deep knowledge of Uno Platform and your running app to simplify cross-platform .NET design.
-
-To get started with **Hot Design® Agent**, jump to the [Hot Design® Agent](xref:Uno.HotDesign.Agent) page.
-
-![Hot Design Agent Panels Highlighted](Assets/hot-design-agent-view.png)
 
 ## Hot Design<sup>®</sup> Core Tool Panels
 
