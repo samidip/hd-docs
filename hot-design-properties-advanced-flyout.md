@@ -61,6 +61,10 @@ Binding allows for a dynamic data connection between your UI and data source. He
 
 - **Path**: Define the property path within your DataContext. You can either type it manually or select one from the dropdown list of available properties.
 
+  For `x:Bind`, the path dropdown has an **Instance / Static** switch at the top:
+  - **Instance** (default): the members of the binding's source — the page or `UserControl` code-behind, or, inside a `DataTemplate`, the type set as `x:DataType`.
+  - **Static**: public static properties and parameterless static methods declared on any non-framework type in your application project or a referenced project in your solution, grouped by their declaring type (your current class is labeled *"current class"*). Selecting one produces a type-qualified compiled binding such as `{x:Bind local:AppSettings.Theme}` or `{x:Bind utils:Formatters.Currency()}`, and the required XML namespace is declared for you automatically. Static bindings are read-only (`OneTime`). The switch appears only for `x:Bind`, and only when static members are available.
+
 - **Mode**: Select how the binding flows:
   - `OneTime`: Sets the value once.
   - `OneWay`: Updates the UI when the source changes.
