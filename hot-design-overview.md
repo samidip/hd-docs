@@ -29,11 +29,7 @@ Together with Hot Reload, Design-to-Code, and the Uno Platform MCPs, these tools
 
 ### Key Features
 
-**Hot Design® Agent** is an AI-powered assistant that enables rapid UX/UI creation and enhancement within your application. It leverages data contexts and live previews to help developers design, refine, and interact with user interfaces in real time, using deep knowledge of Uno Platform and your running app to simplify cross-platform .NET design.
-
-To get started with **Hot Design® Agent**, jump to the [Hot Design® Agent](xref:Uno.HotDesign.Agent) page.
-
-**Hot Design** also empowers you to:
+**Hot Design** empowers you to:
 
 - **Achieve the Fastest Inner DevLoop**: With a single click, turn your running app into a visual Designer. Another click returns you to your app, keeping you in your workflow without disruption.
 - **Design in Real Time**: Modify your app’s UI instantly while it’s running, enabling fast, interactive development.
@@ -70,11 +66,6 @@ By simplifying UI development and accelerating your workflow, **Hot Design** hel
 - **[Elements](xref:Uno.HotDesign.Elements)** — Visual tree structure and hierarchy management
 - **[Canvas](xref:Uno.HotDesign.Canvas)** — Interactive design surface with real-time preview
 - **[Properties](xref:Uno.HotDesign.Properties)** — Smart and advanced property editing
-
-### Chat and AI Features
-
-- **[Hot Design Agent](xref:Uno.HotDesign.Agent)** — AI-powered UI generation and design assistance
-- **[Image Attachment in Chat](xref:Uno.HotDesign.ImageAttachment)** — Attach design mockups and reference images
 
 ### Reference
 

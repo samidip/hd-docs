@@ -100,7 +100,7 @@ Key toolbar actions include:
 
 - <img src="Assets/toolbar-hot-design-exit-icon.png" alt="Leave Hot Design Toolbar flame icon" height=30  />  Leaving **Hot Design** mode.
 
-- <img src="Assets/toolbar-switch-modes.png" alt="Toggle agent, design and interactive modes icon" />  Toggling between **Agent**, **Design** and **Interactive** modes.
+- <img src="Assets/toolbar-switch-modes.png" alt="Toggle design and interactive modes icon" />  Toggling between **Design** and **Interactive** modes.
 
 - <img src="Assets/toolbar-undo.png" alt="Hot Design Toolbar undo icon" height=30  /><img src="Assets/toolbar-redo.png" alt="Hot Design Toolbar redo icon" height=30  />   Undoing and redoing changes.
 

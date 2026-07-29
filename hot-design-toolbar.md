@@ -37,15 +37,13 @@ Click the flame icon in the **Toolbar** to toggle Hot Design mode.
 - <img src="Assets/toolbar-hot-design-enter-icon.png" alt="Enter icon" height="30" style="vertical-align:middle; margin-right:6px;" /> **Enter**: Activates live editing and lets you interact with the app UI directly on the **Canvas**.
 - <img src="Assets/toolbar-hot-design-exit-icon.png" alt="Exit icon" height="30" style="vertical-align:middle; margin-right:6px;" /> **Exit**: Returns to your running app view while keeping the app state intact.
 
-## Choose Agent, Design or Interactive Mode
+## Choose Design or Interactive Mode
 
-The **Toolbar** offers seamless switching between **Agent**, **Design** and **Interactive** modes.
+The **Toolbar** offers seamless switching between **Design** and **Interactive** modes.
 
 <p align="center">
   <img src="Assets/toolbar-switch-modes.png" alt="Mode switcher" />
 </p>
-
-- **Agent** mode provides a view of the [Hot Design Agent](xref:Uno.HotDesign.Agent).
 
 - **Design** mode allows you to select elements from your app and edit them. This is where you can adjust layout, modify properties, and refine the structure of your UI.
 

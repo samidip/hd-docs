@@ -30,15 +30,6 @@ If you encounter a problem not listed here, please [file a bug report](https://g
   - Close the external window and reopen it by toggling: **Overflow Menu** > **Window** > **Show Tools In-App**.
   - If the issue persists, restart Hot Design.
 
-#### Image Attachment Not Working in Chat
-
-- **Description:** When clicking the file picker button in Chat, nothing happens, or images won't attach.
-- **Cause:** File picker may not be initialized, or file permissions are blocked.
-- **Solution:**
-  - Ensure you have read permissions on your file system.
-  - Verify that you're using a [supported image format](xref:Uno.HotDesign.ImageAttachment) (.jpg, .jpeg, .png).
-  - Close and reopen the Chat panel, then try again.
-
 #### Native Controls Disappear on Hover
 
 - **Description:** Native controls (such as WebView2, MediaPlayerElement, or other platform-native elements) disappear or become invisible when hovering over them with the mouse in Hot Design mode.

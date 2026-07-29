@@ -2,13 +2,6 @@
   href: xref:Uno.HotDesign.Overview
 - name: Getting Started with Hot Design
   href: xref:Uno.HotDesign.GetStarted.Guide
-- name: Agent
-  href: xref:Uno.HotDesign.Agent
-  items:
-  - name: Hot Design Agent
-    href: xref:Uno.HotDesign.Agent
-  - name: Image Attachment
-    href: xref:Uno.HotDesign.ImageAttachment
 - name: Troubleshooting
   href: xref:Uno.HotDesign.Troubleshooting
 - name: Counter Tutorial

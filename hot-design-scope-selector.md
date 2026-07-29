@@ -113,5 +113,4 @@ You can continue navigating up until you reach **Application Scope**.
 ## Related Topics
 
 - [**Elements Panel**](xref:Uno.HotDesign.Elements) — Manage your visual tree structure
-- [**Hot Design Agent**](xref:Uno.HotDesign.Agent) — Design complex templates with AI assistance
 - [**Properties Panel**](xref:Uno.HotDesign.Properties) — Modify element properties within any scope
