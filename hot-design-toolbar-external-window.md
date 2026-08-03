@@ -55,10 +55,6 @@ To move tools to an external window:
 - Your app view becomes **larger** and less cluttered
 - All tools **communicate with your running app** in real-time — changes made in the external window are reflected in your app immediately
 
-<p align="center">
-  <img src="Assets/toolbar-external-window-view.png" alt="External Tool Window with All Panels" />
-</p>
-
 ### Advantages of External Window
 
 - Maximizes app canvas space
