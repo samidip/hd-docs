@@ -4,24 +4,34 @@ uid: Uno.HotDesign.Shortcuts
 
 # Hot Design Shortcuts
 
-This page lists all keyboard and mouse shortcuts available in the **Hot Design** experience for quick reference.
+This page lists all keyboard and mouse shortcuts available in the **Hot Design** experience for quick reference. You can also open it from Hot Design itself: **More** (⋯) > **Windows** > **Shortcuts**.
+
+On macOS, use `Cmd` wherever `Ctrl` is listed.
 
 ## General Editing
 
-| Action                | Shortcut         |
-|-----------------------|------------------|
-| Delete element(s)     | Delete           |
-| Undo                  | Ctrl + Z         |
-| Redo                  | Ctrl + Shift + Z |
-| Duplicate selection   | Ctrl + Drag      |
-| Multi-select elements | Ctrl + Click     |
+| Action                | Shortcut                    |
+|-----------------------|-----------------------------|
+| Delete element(s)     | Delete                      |
+| Undo                  | Ctrl + Z                    |
+| Redo                  | Ctrl + Y or Ctrl + Shift + Z |
+| Duplicate selection   | Ctrl + Drag                 |
+| Multi-select elements | Ctrl + Click                |
 
 ## Element Selection & Navigation
 
-| Action                                  | Shortcut     |
-|-----------------------------------------|--------------|
-| Cycle to deepest element under cursor   | Alt + Click  |
-| Select / clear multiple in tree         | Ctrl + Click |
+| Action                                  | Shortcut         |
+|-----------------------------------------|------------------|
+| Cycle to the element beneath the selection | Alt + Click   |
+| Select / clear multiple in tree         | Ctrl + Click     |
+| Select the parent element               | Shift + Enter    |
+| Edit the selected UserControl           | Ctrl + Shift + U |
+
+## Interactive Mode
+
+| Action                                            | Shortcut         |
+|---------------------------------------------------|------------------|
+| Toggle Interactive mode (Selection ↔ Interactive) | Ctrl + Shift + I |
 
 ## Canvas Zoom & Pan
 
@@ -29,7 +39,7 @@ This page lists all keyboard and mouse shortcuts available in the **Hot Design**
 |----------------------------------|------------------------------------------|
 | Zoom in                          | Ctrl + Mouse Wheel Up or Ctrl + `+`      |
 | Zoom out                         | Ctrl + Mouse Wheel Down or Ctrl + `-`    |
-| Reset zoom to default            | Ctrl + 0                                 |
+| Fit content to the canvas        | Ctrl + 0                                 |
 | Zoom to 100%                     | Ctrl + 1                                 |
 | Zoom to 200%                     | Ctrl + 2                                 |
 | Zoom to 300%                     | Ctrl + 3                                 |
@@ -38,10 +48,20 @@ This page lists all keyboard and mouse shortcuts available in the **Hot Design**
 | Pan vertically (when zoomed)     | Mouse Wheel                              |
 | Pan any direction (when zoomed)  | Middle-click and drag                    |
 
+## Design Surface Size
+
+| Action                                                  | Shortcut               |
+|---------------------------------------------------------|------------------------|
+| Resize the design surface to the window size            | Ctrl + Shift + 0       |
+| Resize the design surface to the visible canvas size    | Ctrl + Shift + 1       |
+| Cycle forward through the form factor presets           | Ctrl + Shift + `+`     |
+| Cycle backward through the form factor presets          | Ctrl + Shift + `-`     |
+
 ## UI Panel Toggles
 
-| Panel     | Shortcut          |
-|-----------|-------------------|
-| Elements  | Ctrl + Shift + E  |
-| Properties| Ctrl + Shift + P  |
-| Toolbox   | Ctrl + Shift + T  |
+| Panel      | Shortcut          |
+|------------|-------------------|
+| All panels | Ctrl + Shift + A  |
+| Toolbox    | Ctrl + Shift + T  |
+| Elements   | Ctrl + Shift + E  |
+| Properties | Ctrl + Shift + P  |

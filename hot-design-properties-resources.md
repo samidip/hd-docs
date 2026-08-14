@@ -27,18 +27,27 @@ To assign a property from a resource, open the Advanced Flyout by clicking the t
 
 <img src="Assets/properties-flyout-resources.gif" height="600" alt="GIF showing how to set resources on the Advanced Flyout" />
 
-Hot Design supports auto-suggest for both `StaticResource` and `ThemeResource`, making it easier to pick from available keys without memorizing them.
+Hot Design supports auto-suggest for both `StaticResource` and `ThemeResource`, making it easier to pick from available keys without memorizing them. Suggestions are filtered to resources whose **type is compatible** with the property you are editing, and narrow further as you type. The reference is written using the kind the resource actually is — `{StaticResource …}` for a static resource, `{ThemeResource …}` for a theme resource.
+
+> [!IMPORTANT]
+> Hot Design writes a resource **reference**, never a resource **definition**. Picking a resource for a property adds the markup expression to your element; it does not create or modify the resource itself. Define the resource in your XAML first, then assign it here.
 
 ## Resource Scope
 
 The available resource keys depend on where they're defined:
 
-- **Local**: in the same page or control.
+- **Local**: in the same page or control. Dictionaries visible to the selected element are listed alongside the global ones.
 - **Application-wide**: in App.xaml or globally merged dictionaries.
 - **Themed resources**: change automatically with Light/Dark mode.
 
 > [!NOTE]
 > Prefer `ThemeResource` for brushes or fonts that should adapt to theme changes.
+>
+> When you assign a `ThemeResource` from the grid, the canvas immediately shows the resolved value. Full responsiveness to theme changes takes effect once the XAML file has been written and reloaded.
+
+## Resources as a Source of Previews
+
+Named styles and keyed data templates in your resources also show up as [Previews](xref:Uno.HotDesign.Previews), so you can open a styled variant on its own and see it without hunting for a screen that uses it. Styles your app declares in its own XAML appear on the **App** tab; styles from a theme (Material, SimpleTheme) or a merged library dictionary appear on the **System** tab.
 
 ## Editing or Removing a Resource
 

@@ -44,6 +44,7 @@ Together with Hot Reload, Design-to-Code, and the Uno Platform MCPs, these tools
 - **Switch Themes Effortlessly**: Toggle between light and dark modes with one click to ensure a consistent user experience across color schemes.
 - **Design on Remote Devices**: Fine-tune your UI directly on remote devices or emulators, instantly seeing changes without the need for constant redeployment.
 - **Simplify Property Management**: Use Smart Properties to quickly find, modify, and bind key UI properties without leaving the live design environment, saving time and effort.
+- **Design Components in Isolation**: Use **Previews** to open a single control, page, `UserControl`, data template, or styled variant on its own, in the data state you care about — without navigating your app to the screen that uses it.
 
 ## Why Hot Design<sup>®</sup>?
 
@@ -57,15 +58,20 @@ By simplifying UI development and accelerating your workflow, **Hot Design** hel
 
 ### Workspace and Navigation
 
+- **[Toolbar](xref:Uno.HotDesign.Toolbar)** — Modes, undo/redo, form factor, zoom, theme, and panel visibility
 - **[Scope Selector](xref:Uno.HotDesign.ScopeSelector)** — Navigate and edit UserControls and DataTemplates in isolation
 - **[Toolbar and External Tool Window](xref:Uno.HotDesign.ToolbarExternalWindow)** — Fixed toolbar options, external window mode, and tool layout management
 
 ### Design and Elements
 
-- **[Toolbox](xref:Uno.HotDesign.Toolbox)** — Categorized controls and drag-and-drop design
+- **[Toolbox](xref:Uno.HotDesign.Toolbox)** — Categorized controls, snippets, and drag-and-drop design
 - **[Elements](xref:Uno.HotDesign.Elements)** — Visual tree structure and hierarchy management
 - **[Canvas](xref:Uno.HotDesign.Canvas)** — Interactive design surface with real-time preview
 - **[Properties](xref:Uno.HotDesign.Properties)** — Smart and advanced property editing
+
+### Components
+
+- **[Previews](xref:Uno.HotDesign.Previews)** — Design a single component in isolation, in the data state you choose
 
 ### Reference
 

@@ -18,6 +18,8 @@
   href: xref:Uno.HotDesign.ScopeSelector
 - name: Canvas
   href: xref:Uno.HotDesign.Canvas
+- name: Previews
+  href: xref:Uno.HotDesign.Previews
 - name: Shortcuts
   href: xref:Uno.HotDesign.Shortcuts
 - name: Properties

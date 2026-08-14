@@ -30,11 +30,44 @@ Hot Design requires **Uno.Sdk 6.0 or later** (we recommend our newer versions to
 
 If you’re coming from **Uno.Sdk 5.4 or lower**, note that `EnableHotReload()` in *App.xaml.cs* has been deprecated. Replace it with `UseStudio()` to keep Hot Reload working.
 
-Once you’ve updated your project and **[signed in with your Uno Platform account](xref:Uno.GetStarted.Licensing)**, you can access **Hot Design** by clicking the **flame** icon in the diagnostics overlay that appears over your app.
+Once you've updated your project and **[signed in with your Uno Platform account](xref:Uno.GetStarted.Licensing)**, you can access **Hot Design** by clicking the **flame** icon in the diagnostics overlay that appears over your app.
 
 <p align="center">
   <img src="Assets/enter-hot-design-mode.png" alt="Hot Design flame icon to enter design mode" />
 </p>
+
+### Hot Design Status on the Entry Button
+
+The flame icon carries a badge that tells you whether Hot Design can be entered, and why not when it can't:
+
+| State | Icon |
+| --- | --- |
+| Initializing | Flame with a gray badge containing three dots |
+| Ready (licensed) | Solid flame in the theme color |
+| Trial period | Flame with a badge containing an exclamation mark |
+| Trial expired / unlicensed / signed out | Flame with a blue badge |
+| Connection error | Grayed flame with a red badge — the button also collapses |
+| Hot Design active | The **Exit Hot Design Mode** icon |
+
+Hovering shows **Activate Hot Design**, **Trial: X days left - Activate Hot Design**, or **Exit Hot Design** while active.
+
+The button is **hidden** while the system cannot be used at all — while the dev server connection or the license response is still pending, when the dev server is not running, or when your app was not built from the IDE. It **is** shown for license states you can act on: clicking it then explains the situation with a sign-in or get-license action instead of entering. A trial with five or fewer days remaining still enters, with a warning about the days left.
+
+> [!NOTE]
+> Hot Design also needs the Hot Reload engine to be ready. Until it first becomes ready, the status stays *Initializing*; once it has, that readiness is latched, so ordinary background reloads do not push the status back.
+>
+> An application targeting a framework older than **.NET 9** cannot enter Hot Design, and a message explains that .NET 9 or later is required.
+
+### What Happens the First Time
+
+On your very first Hot Design session:
+
+- Hot Design **activates automatically** once the connection and license response arrive and the status is usable, and shows the introduction overlay. (It also resumes automatically on later runs if it was active when your app last closed. You can force or suppress this with the launch-on-start option — set via API parameter, MSBuild property, or environment variable, where the environment variable wins, then the MSBuild property, then the API parameter.)
+- Your app window is **maximized** to give the tools room, and the size and state it had beforehand are remembered so they can be restored when you exit.
+- An **introduction overlay** presents three slides — *Welcome to Hot Design*, *Design Mode*, and *Interactive Mode*. Dismissing it (or exiting Hot Design from it) prevents it from showing again.
+- The **innermost page** in your visual tree is opened for editing automatically, so you can start editing without double-clicking the page in the hierarchy.
+
+On later activations the window restores to the size and maximized state of your last Hot Design session, and returns to its pre-Hot Design size and state when you exit.
 
 ### Choosing Your Tool Layout
 
@@ -43,7 +76,7 @@ After dismissing the intro, you can choose how to organize **Hot Design** tools:
 - **Fixed In-App Toolbar** (default) — Tools appear at the top of your running app window
 - **External Tool Window** — Tools open in a separate window, giving you more app canvas space
 
-To switch between these layouts, click the **Overflow Menu** (three dots) in the toolbar and toggle **Window** > **Show Tools In-App**.
+To switch between these layouts, click the **More** menu (three dots) in the toolbar and toggle **Windows** > **Show Tools In-App**.
 
 [➜ Learn more about toolbar options and external window](xref:Uno.HotDesign.ToolbarExternalWindow)
 
@@ -86,6 +119,14 @@ This panel also allows you to search for specific properties and make adjustment
 
 [➜ Learn more about the Properties panel](xref:Uno.HotDesign.Properties)
 
+### Previews
+
+A narrow navigation bar down the left edge switches between two editing contexts: **Application** — your live running app, described above — and **[Previews](xref:Uno.HotDesign.Previews)**.
+
+Selecting **Previews** swaps the **Toolbox** and **Elements** panels for the **Previews** panel, a browsable tree of every previewable piece of UI in your app: pages, `UserControl`s, controls, data templates, and styled variants. Selecting one renders it on the canvas on its own, so you can design a component in a specific data state without navigating your app to the screen that uses it.
+
+[➜ Learn more about Previews](xref:Uno.HotDesign.Previews)
+
 ### Toolbar
 
 <p align="center">
@@ -100,7 +141,7 @@ Key toolbar actions include:
 
 - <img src="Assets/toolbar-hot-design-exit-icon.png" alt="Leave Hot Design Toolbar flame icon" height=30  />  Leaving **Hot Design** mode.
 
-- <img src="Assets/toolbar-switch-modes.png" alt="Toggle design and interactive modes icon" />  Toggling between **Design** and **Interactive** modes.
+- <img src="Assets/toolbar-selection-interactive.png" alt="Selection and Interactive toggle" height=30 />  Switching between **Selection** and **Interactive**, to design or to drive your running app.
 
 - <img src="Assets/toolbar-undo.png" alt="Hot Design Toolbar undo icon" height=30  /><img src="Assets/toolbar-redo.png" alt="Hot Design Toolbar redo icon" height=30  />   Undoing and redoing changes.
 
@@ -201,9 +242,40 @@ The **Toolbar** includes a feature to toggle between your app's light and dark t
 
 ### Interacting with the Canvas
 
-You can interact with the canvas using standard design-surface navigation shortcuts that let you zoom, pan, and scroll while working in Hot Design.
+You can interact with the canvas using standard design-surface navigation shortcuts that let you zoom, pan, and scroll while working in Hot Design. You can also resize the design surface directly by dragging the grippers on the four edges of the device frame.
 
 For a complete reference of all keyboard and mouse shortcuts, see [Hot Design Shortcuts](xref:Uno.HotDesign.Shortcuts).
+
+### Testing Your App Without Leaving the Designer
+
+Switch the **Selection / Interactive** toggle to **Interactive** (or press `Ctrl + Shift + I`) and pointer input passes straight through to your running app: buttons work, navigation works, animations run. Switch it back to **Selection** and the designer rebuilds its view of the tree so you can carry on editing wherever you navigated to.
+
+Your open editors and canvas settings are untouched by the round trip, so you never lose your place by testing.
+
+## Leaving Hot Design
+
+Exit from the entry button, the toolbar's exit button, or the introduction overlay's exit action. On exit:
+
+- All open editors are closed and any selection is cleared.
+- Any XAML file writes still queued are flushed to disk — pending changes are never lost.
+- Your app window returns to the size and state it had before Hot Design was entered, and your app is shown as it was, still live.
+
+One thing asks you to confirm first, and declining cancels the exit: if **design-time data is still on your elements**, you are asked to confirm removing it.
+
+## What Hot Design Remembers
+
+Your designer setup survives closing and restarting your app:
+
+| Setting | Behavior |
+| --- | --- |
+| Active state | Hot Design re-enters automatically if it was active when your app closed |
+| Application / Previews mode | Restored |
+| Visible tool panels | Restored |
+| Tooling placement (in-app / external) | Restored |
+| Canvas size, zoom, auto-fit | Restored per editing context |
+| Custom form-factor dimensions | Restored when you switch back to **User defined size** |
+| Window size and state | Pre-Hot Design state restored on exit; last designing state restored on the next activation |
+| First-launch prompt | Remembered — the introduction shows only until you dismiss it |
 
 ### Next Step
 
