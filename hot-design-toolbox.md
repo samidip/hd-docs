@@ -28,10 +28,10 @@ When the search box is empty, the Toolbox displays all available controls organi
 
 Selected by default, the **App** tab lists the controls that belong to your solution:
 
-- A group **named after your application**, containing the public controls, `UserControl`s, and pages defined in your app project.
-- A **Projects** group, with one sub-category per in-solution library that your app references by project reference.
+- A group **named after your application**, containing the public controls defined in your app project, split into a **User Controls** sub-group (types deriving from `UserControl`) and a **Controls** sub-group (every other control). A sub-group is shown only when it contains at least one control.
+- A **Projects** group, with one sub-category per in-solution library that your app references by project reference, listing that library's controls.
 
-Only types that Hot Design can actually create are listed: public, non-abstract, deriving from `UIElement`, and with a parameterless constructor. Previews and preview groups are never offered as controls — they are listed in the [Previews](xref:Uno.HotDesign.Previews) panel instead.
+Only types that Hot Design can actually create are listed: public, non-abstract, deriving from `UIElement`, and with a parameterless constructor. Pages are not listed — they are navigation roots rather than composable content. Previews and preview groups are never offered as controls either — they are listed in the [Previews](xref:Uno.HotDesign.Previews) panel instead.
 
 ### System
 
@@ -46,6 +46,7 @@ The **System** tab lists everything that comes from outside your solution, under
 - **Text** — `TextBlock` and other text presentation controls
 - **General** — everything built in that fits none of the above
 - **Third Party** — controls from referenced packages, with one sub-category per library assembly
+- **Snippets** — when snippets are enabled for your license, a single node whose sub-groups hold pre-composed starting points (see [Snippets](#snippets) below)
 
 Each item is a text row showing the control name; hovering shows a tooltip with its full name.
 
@@ -54,11 +55,11 @@ Each item is a text row showing the control name; hovering shows a tooltip with 
 
 ### Snippets
 
-The **Snippets** tab appears after **App** and **System** when snippets are enabled for your license. A snippet is a pre-composed, multi-element starting point rather than a single control — a sign-in form, a card, or a responsive page layout — grouped under snippet categories such as **Components**, **Navigation**, **Sections**, **Cards**, and **Page Layouts**.
+When snippets are enabled for your license, the **System** tab ends with a **Snippets** node. A snippet is a pre-composed, multi-element starting point rather than a single control — a sign-in form, a card, or a responsive page layout. Under the Snippets node, snippets are grouped by type into sub-groups such as **Components**, **Navigation**, **Sections**, **Cards**, and **Page Layouts**.
 
-Snippets depend on what your running application references: a snippet that needs an optional library (for example Uno Toolkit, Material theming, or reactive extensions) is omitted when your app does not reference it.
+Snippets depend on what your running application references: a snippet that needs an optional library (for example Uno Toolkit, Material theming, or reactive extensions) is omitted when your app does not reference it. When snippets are not enabled, no Snippets node is shown.
 
-<!-- TODO(image): Screenshot of the Toolbox tab bar showing App, System, and Snippets tabs, with the Snippets tab open and its categories (Components, Navigation, Sections, Cards, Page Layouts) visible. -->
+<!-- TODO(image): Screenshot of the System tab with the Snippets node expanded, showing its type sub-groups (Components, Navigation, Sections, Cards, Page Layouts). -->
 
 ### Control Variants
 
