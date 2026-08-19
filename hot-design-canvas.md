@@ -85,6 +85,24 @@ When a single element is selected, a solid outline (the *visual adorner*) appear
 
 Hovering a side of a margin or padding band shows that side's value (for example **16 Padding**), so you can read the spacing without opening the **Properties** panel.
 
+### Adjust Spacing and Size by Dragging
+
+You can change these values on the canvas instead of typing them into the **Properties** panel. Select an element and drag:
+
+- a **margin** or **padding** area to change that side's value
+- the **spacing** guide between a container's children to change its `Spacing`, `RowSpacing` or `ColumnSpacing`
+- the element's **edge** to change its `Width` or `Height`
+- the **border** gripper, at the middle of that edge, to change its `BorderThickness`
+
+Each area carries a small marker at its middle showing where to grab it. An area is a fixed size on screen, so it stays the same target at any zoom level and at any value — including zero, so you can introduce a margin, padding or spacing that is not there yet. A margin area sits outside the element and a padding area inside it, so the two are never confused, and the rest of each band stays available for selecting whatever lies underneath.
+
+The element responds as you drag, so you can see the layout settle; your XAML is written once when you release, giving one change to undo. Values step in fours — `0`, `1`, `2`, `4`, `8`, `12` and so on — because layout values usually want to be multiples of four; hold **Shift** to move a pixel at a time. A badge beside the pointer shows the value and which property you are changing.
+
+Press **Esc** mid-drag to abandon it: the element returns to the value it started at and nothing is written. If a change cannot be written, the element is put back and you are told, so the canvas never shows a value your source does not have.
+
+> [!NOTE]
+> Resizing an element whose size its container was deciding sets the size explicitly, so the element stops sizing itself to that container. Hot Design tells you when this happens, because nothing else on the canvas would show it.
+
 When **two or more** elements are selected, each is drawn with an outline only — no label and no margin/padding bands.
 
 Adorners follow the element they decorate: they track its rendered bounds as it moves, resizes, or the canvas zoom changes.
@@ -94,7 +112,7 @@ Adorners follow the element they decorate: they track its rendered bounds as it 
 Some containers get affordances specific to them:
 
 - **`Grid`** — dashed separator lines between rows and columns when spacing is zero, spacing indicators where row or column spacing is greater than zero, and a highlight over the usable content area inside the `Grid`'s padding.
-- **`StackPanel`** — dashed separators between children when spacing is zero, and spacing indicators between them when it is not.
+- **`StackPanel`** — dashed separators between children when spacing is zero, and spacing indicators between them when it is not. A guide appears between each pair of **visible** children: a collapsed child takes up no space in the panel, so no gap is shown for it.
 - **`SwipeControl`** — **Swipe Left** / **Swipe Right** buttons, so you can preview the swipe states without a touch gesture.
 
 Any control with no specific adorner still gets the default outline.
