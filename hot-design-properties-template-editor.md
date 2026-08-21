@@ -45,6 +45,12 @@ In the **Elements** panel the template itself appears as a **template root** nod
 
 To author compiled bindings inside a template, its `x:DataType` has to be set. Select the template root node and set it from the **Identity** category using its **Set data type…** field. Until it is set, the binding editor's path picker shows a **Missing x:DataType for DataTemplate** notice instead of the member list. See [x:DataType](xref:Uno.HotDesign.Properties.Editors#xdatatype).
 
+### Sizing the Template Surface
+
+A template opens at a size suited to the template — its own rendered content — rather than to a page. To set an exact size, open the **Zoom/Size** flyout from the toolbar: while editing a template it offers **Width** and **Height** inputs (and Zoom), so you can size the editing surface precisely. Device form-factor presets and the *Window size* / *Canvas size* shortcuts are not shown here, because a fixed device or window size is not meaningful for a template.
+
+Opening the flyout does not resize the template — only a Width/Height value you enter changes it. The size you choose is remembered per template, so reopening it (or opening it again in a later session) starts at the size you set.
+
 ### Leaving the Template Editor
 
 To exit the template editor and return to the main layout:
