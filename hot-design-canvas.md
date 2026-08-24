@@ -87,16 +87,20 @@ Hovering a side of a margin or padding band shows that side's value (for example
 
 ### Adjust Spacing and Size by Dragging
 
+> [!NOTE]
+> Editing layout by dragging on the canvas is a preview feature and is off by default. Enable it for your application by adding `[assembly: PreviewFeature(PreviewFeature.CanvasDragEditing)]` (from `Uno.UI.HotDesign.Client.Logic.AppFeatures`), the same way other preview features are opted into. While it is off, a selected element still shows its outline and its margin/padding bands, but nothing on the canvas can be dragged to edit those values.
+
 You can change these values on the canvas instead of typing them into the **Properties** panel. Select an element and drag:
 
 - a **margin** or **padding** area to change that side's value
 - the **spacing** guide between a container's children to change its `Spacing`, `RowSpacing` or `ColumnSpacing`
 - the element's **edge** to change its `Width` or `Height`
+- a **corner** to change the `Width` and `Height` together — hold **Shift** while dragging a corner to keep the element's proportions
 - the **border** gripper, at the middle of that edge, to change its `BorderThickness`
 
-Each area carries a small marker at its middle showing where to grab it. An area is a fixed size on screen, so it stays the same target at any zoom level and at any value — including zero, so you can introduce a margin, padding or spacing that is not there yet. A margin area sits outside the element and a padding area inside it, so the two are never confused, and the rest of each band stays available for selecting whatever lies underneath.
+When the pointer moves over one of these areas a small marker appears at its middle, showing where to grab it; it stays hidden otherwise so a selected element is not covered in markers. An area is a fixed size on screen, so it stays the same target at any zoom level and at any value — including zero, so you can introduce a margin, padding or spacing that is not there yet. A margin area sits outside the element and a padding area inside it, so the two are never confused, and the rest of each band stays available for selecting whatever lies underneath. A corner shows a diagonal resize cursor and is offered only when the element is large enough to resize on both axes.
 
-The element responds as you drag, so you can see the layout settle; your XAML is written once when you release, giving one change to undo. Values step in fours — `0`, `1`, `2`, `4`, `8`, `12` and so on — because layout values usually want to be multiples of four; hold **Shift** to move a pixel at a time. A badge beside the pointer shows the value and which property you are changing.
+The element responds as you drag, so you can see the layout settle; your XAML is written once when you release, giving one change to undo — a corner drag writes its width and height together, so undoing it returns both. Values step in fours — `0`, `1`, `2`, `4`, `8`, `12` and so on — because layout values usually want to be multiples of four; hold **Shift** to move a pixel at a time (on a corner, **Shift** locks the aspect ratio instead). A badge beside the pointer shows the value and which property you are changing, or `Width × Height` while resizing from a corner.
 
 Press **Esc** mid-drag to abandon it: the element returns to the value it started at and nothing is written. If a change cannot be written, the element is put back and you are told, so the canvas never shows a value your source does not have.
 
