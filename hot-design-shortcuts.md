@@ -48,6 +48,20 @@ On macOS, use `Cmd` wherever `Ctrl` is listed.
 | Pan vertically (when zoomed)     | Mouse Wheel                              |
 | Pan any direction (when zoomed)  | Middle-click and drag                    |
 
+## Canvas Rulers & Guides
+
+| Action                                  | Shortcut                        |
+|-----------------------------------------|---------------------------------|
+| Show or hide the rulers and guides      | Ctrl + R                        |
+| Show or hide the crosshair              | Ctrl + Shift + R                |
+| Measure from a point (crosshair on)     | Hold Shift and move the pointer |
+| Add a guide                             | Drag out of a ruler             |
+| Move a guide                            | Drag the guide                  |
+| Delete a guide                          | Drag it back onto its ruler, or select it and press Delete |
+| Clear the guide selection               | Escape                          |
+
+These are preview features and are off by default — see [Working on the canvas](xref:Uno.HotDesign.Canvas) for how to switch them on.
+
 ## Design Surface Size
 
 | Action                                                  | Shortcut               |

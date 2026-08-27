@@ -255,6 +255,72 @@ Application content that paints outside its layout bounds — a full-screen back
 
 A fixed inset is kept between the design surface and the edge of the canvas viewport, with extra space at the bottom while a preview is open so content never renders under the **Edit** overlay button.
 
+## Rulers and Guides
+
+> [!NOTE]
+> The rulers and the crosshair are preview features and are off by default. Enable them for your
+> application by adding `[assembly: PreviewFeature(PreviewFeature.CanvasRulers)]` and
+> `[assembly: PreviewFeature(PreviewFeature.CanvasCrosshair)]` (from
+> `Uno.UI.HotDesign.Client.Logic.AppFeatures`), the same way other preview features are opted into.
+> The crosshair needs the rulers: on its own it is not offered. While a feature is off, its entry is
+> absent from the **Windows** menu and its shortcut does nothing.
+
+The canvas is framed by **rulers** — one along the top, one down the left. Press `Ctrl + R` to turn them
+off, or back on; the same toggle sits in **More** (⋯) > **Windows** > **Rulers & Guides**. Your choice is
+remembered, so if you turn them off they stay off next time you open Hot Design.
+
+Position `0` on each ruler lines up with the top-left corner of the screen you are designing, so a
+value on a ruler is the coordinate your XAML would use. Values to the left of, or above, that corner
+read as negative. The rulers follow the canvas as you zoom and pan, and the spacing between labelled
+marks adapts so the numbers never run together.
+
+**Where the pointer is.** The crosshair is off to begin with. Press `Ctrl + Shift + R` — or use
+**More** (⋯) > **Windows** > **Crosshair** — for a crosshair that follows the pointer across the canvas. With the rulers on, each ruler shows the
+coordinate under the pointer beside the crosshair line.
+
+The crosshair and the rulers are separate toggles, and each is remembered on its own. Turn the
+crosshair on by itself to line two elements up by eye without giving up canvas space to the rulers, or
+turn the rulers on by themselves if you would rather nothing followed the pointer.
+
+**Where the selection is.** Selecting an element bands its extent on both rulers and calls out the
+start and end values, so you can read an element's position and size straight off the ruler. A
+labelled mark that would collide with one of those values is hidden while it does.
+
+**Guides** are reference lines you place yourself:
+
+- **Add one** by pressing on a ruler and dragging onto the canvas. A plain click on a ruler leaves
+  nothing behind.
+- **Move one** by dragging it. A guide runs the full width or height of the canvas, across its ruler,
+  and can be grabbed anywhere along it; the ruler shows its position as you drag.
+- **Delete one** by dragging it back onto the ruler it came from, or by selecting it and pressing
+  `Delete`. With a guide selected, `Delete` removes the guide rather than the selected element.
+- **Clear them all** from the ruler's own context menu — right-click either ruler for
+  **Hide Rulers & Guides** and **Clear All Guides**.
+
+**How far apart things are.** With two or more guides on the same axis, the distance between each
+adjacent pair is shown on the canvas beside that axis' ruler, on an arrow spanning the gap it measures,
+in the same units the rulers use. Drag a guide and the distances follow it. A gap too narrow for the
+number to fit is left unlabelled — zoom in and it appears.
+
+Each guide's own position is shown on its ruler at all times, so you can read where every guide is
+without touching any of them. A guide turns the highlight colour while you drag it and returns to the
+guide colour when you let go.
+
+**Measuring from a point.** With the crosshair on, hold `Shift` to leave a second crosshair where the
+pointer is; as you move, the horizontal and vertical distances from that point are shown on arrows
+spanning them. Release `Shift` to finish. The anchor stays on the canvas position you placed it on, so you can
+pan or zoom mid-measurement. Measuring is a hover gesture: while you are dragging something — resizing
+an element, panning, moving a guide — `Shift` keeps its usual meaning for that drag and no measurement
+is placed.
+
+Guides last for the session rather than being saved with your project, and they are discarded when you
+open a different screen, since a position only means something against the screen it was placed on. The
+ruler and crosshair toggles *are* remembered; the guides are not.
+
+> [!NOTE]
+> The rulers are not drawn while **Interactive** mode is on — the canvas belongs to your running
+> application then, and a strip along its edges would swallow taps meant for your app.
+
 ## Interactive Mode
 
 Hot Design's **Selection / Interactive** toggle decides whether canvas clicks select elements or drive your running app.
@@ -282,6 +348,9 @@ The canvas responds to the shortcuts listed in full on the [Shortcuts](xref:Uno.
 | Zoom to 100% / 200% / 300% | `Ctrl + 1` / `2` / `3` |
 | Toggle Auto-Fit | `Ctrl + 9` |
 | Toggle Interactive mode | `Ctrl + Shift + I` |
+| Show or hide the rulers and guides | `Ctrl + R` |
+| Show or hide the crosshair | `Ctrl + Shift + R` |
+| Measure from a point (crosshair on) | Hold `Shift` |
 
 ## Helpful Notifications
 
