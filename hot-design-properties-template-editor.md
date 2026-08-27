@@ -63,6 +63,11 @@ To exit the template editor and return to the main layout:
 
 Once you return, the control's template will be updated with your changes, and you'll see them reflected in the main design view. The element the template belonged to becomes the selection, and **every instance rendered from that template** picks up your changes — not just the one you were looking at.
 
+This includes templates that are shared. If the template is defined in a resource dictionary and used by controls on more than one page, every page currently loaded in the running app is rebuilt from the edited template, not only the page you opened the editor from. Controls bound to a *different* template are left untouched.
+
+> [!NOTE]
+> Rebuilding a page from the edited template re-creates it, so anything transient that page was holding — scroll position, an in-progress selection, unsaved state in an input control — is reset. This applies to each page that uses the template you edited.
+
 Leaving a template also restores the canvas settings of the context you return to: the page-level width, height, zoom, and auto-fit come back rather than the template's own dimensions.
 
 > [!NOTE]
