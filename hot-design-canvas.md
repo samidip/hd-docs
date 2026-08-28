@@ -69,7 +69,7 @@ Hold `Ctrl` (or `Cmd` on macOS) and click additional elements to select them tog
 
 ### Hover Feedback
 
-Moving the pointer over a selectable element draws a thin **hover outline** around it, so you can see what a click would select before you commit. Resting over an item generated from a `DataTemplate` additionally draws a dashed, warning-colored outline around that templated item.
+Moving the pointer over a selectable element draws a thin **hover outline** around it, so you can see what a click would select before you commit. That is the only outline hover draws — including over an item generated from a `DataTemplate`, where clicking already opens the item's template.
 
 Hover feedback is suppressed while a drag is in progress, and removed when the pointer leaves the canvas.
 
