@@ -47,9 +47,11 @@ To author compiled bindings inside a template, its `x:DataType` has to be set. S
 
 ### Sizing the Template Surface
 
-A template opens at a size suited to the template — its own rendered content — rather than to a page. To set an exact size, open the **Zoom/Size** flyout from the toolbar: while editing a template it offers **Width** and **Height** inputs (and Zoom), so you can size the editing surface precisely. Device form-factor presets and the *Window size* / *Canvas size* shortcuts are not shown here, because a fixed device or window size is not meaningful for a template.
+A template opens at the size it renders at in its list — the size of the element being designed — rather than at a page size. When that size cannot be determined, the surface falls back to a size derived from the parent list control's dimensions and orientation. Content that stretches to fill its place in the list — for example, an item that fills the width of a vertical list — fills the editing surface the same way, while keeping its own item height.
 
-Opening the flyout does not resize the template — only a Width/Height value you enter changes it. The size you choose is remembered per template, so reopening it (or opening it again in a later session) starts at the size you set.
+To set an exact size, open the **Zoom/Size** flyout from the toolbar: while editing a template it offers **Width** and **Height** inputs (and Zoom), so you can size the editing surface precisely. Device form-factor presets and the *Window size* / *Canvas size* shortcuts are not shown here, because a fixed device or window size is not meaningful for a template.
+
+Opening the flyout does not resize the template — only a Width/Height value you enter changes it, and that change applies to the current editing session. Reopening the template (or opening it again in a later session) resolves its size from the template again rather than restoring a size you previously set.
 
 ### Leaving the Template Editor
 
