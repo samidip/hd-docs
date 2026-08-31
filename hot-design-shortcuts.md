@@ -57,8 +57,7 @@ On macOS, use `Cmd` wherever `Ctrl` is listed.
 | Measure from a point (crosshair on)     | Hold Shift and move the pointer |
 | Add a guide                             | Drag out of a ruler             |
 | Move a guide                            | Drag the guide                  |
-| Delete a guide                          | Drag it back onto its ruler, or select it and press Delete |
-| Clear the guide selection               | Escape                          |
+| Delete a guide                          | Drag it onto its ruler and release it there |
 
 These are preview features and are off by default — see [Working on the canvas](xref:Uno.HotDesign.Canvas) for how to switch them on.
 

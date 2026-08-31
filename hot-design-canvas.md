@@ -292,8 +292,10 @@ labelled mark that would collide with one of those values is hidden while it doe
   nothing behind.
 - **Move one** by dragging it. A guide runs the full width or height of the canvas, across its ruler,
   and can be grabbed anywhere along it; the ruler shows its position as you drag.
-- **Delete one** by dragging it back onto the ruler it came from, or by selecting it and pressing
-  `Delete`. With a guide selected, `Delete` removes the guide rather than the selected element.
+- **Delete one** by dragging it onto the ruler it came from and releasing it there — over the ruler
+  strip itself, not just near it. Releasing anywhere else moves the guide instead. Pressing and
+  releasing on the stretch of guide drawn across the ruler counts as a click, not a deletion, so a
+  stray click cannot remove one. `Delete` always acts on the selected element, never on a guide.
 - **Clear them all** from the ruler's own context menu — right-click either ruler for
   **Hide Rulers & Guides** and **Clear All Guides**.
 
