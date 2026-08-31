@@ -56,6 +56,7 @@ To select a control or layout element, click it directly on the **Canvas**. The 
 
 - Clicking an element that is **already selected** keeps it selected in preference to others under the pointer.
 - Hold `Alt` and click to step to the element immediately **beneath** the current selection. Repeated `Alt` + clicks cycle through overlapping elements.
+- Press `Esc` to clear the selection. With nothing selected, `Esc` steps out of the editor you are in, so pressing it repeatedly walks back out of a nested drill-in.
 - The **middle mouse button** never changes the selection — it is reserved for panning.
 - Regions with no selectable element — generated template content with no XAML identity, for example — leave the selection unchanged.
 

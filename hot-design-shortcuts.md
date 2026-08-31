@@ -26,6 +26,8 @@ On macOS, use `Cmd` wherever `Ctrl` is listed.
 | Select / clear multiple in tree         | Ctrl + Click     |
 | Select the parent element               | Shift + Enter    |
 | Edit the selected UserControl           | Ctrl + Shift + U |
+| Clear the selection                     | Escape           |
+| Step out of the current editor          | Escape, with nothing selected |
 
 ## Interactive Mode
 
