@@ -22,7 +22,7 @@ On macOS, use `Cmd` wherever `Ctrl` is listed.
 
 | Action                                  | Shortcut         |
 |-----------------------------------------|------------------|
-| Cycle to the element beneath the selection | Alt + Click   |
+| Select the element under the pointer, then cycle outward through its parents | Alt + Click |
 | Select / clear multiple in tree         | Ctrl + Click     |
 | Select the parent element               | Shift + Enter    |
 | Edit the selected UserControl           | Ctrl + Shift + U |

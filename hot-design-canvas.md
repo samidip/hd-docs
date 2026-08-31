@@ -55,7 +55,7 @@ To select a control or layout element, click it directly on the **Canvas**. The 
 ![Canvas Selection](Assets/canvas-selection.png)
 
 - Clicking an element that is **already selected** keeps it selected in preference to others under the pointer.
-- Hold `Alt` and click to step to the element immediately **beneath** the current selection. Repeated `Alt` + clicks cycle through overlapping elements.
+- Hold `Alt` and click to pick a **parent**. The first click selects the element under the pointer; each further click steps one level outward through its parents, crossing into the surrounding user controls and templates as it goes, and the step after the outermost returns to where you started. Keep clicking until the outline is around what you meant — overshooting costs one more click, not a restart.
 - Press `Esc` to clear the selection. With nothing selected, `Esc` steps out of the editor you are in, so pressing it repeatedly walks back out of a nested drill-in.
 - The **middle mouse button** never changes the selection — it is reserved for panning.
 - Regions with no selectable element — generated template content with no XAML identity, for example — leave the selection unchanged.
@@ -195,6 +195,9 @@ Double-clicking on the canvas navigates the editing context:
 | An item generated from a `DataTemplate` | Opens that template in the [Template Editor](xref:Uno.HotDesign.Properties.TemplateEditor) |
 | A `UserControl` belonging to your project | Opens it in its own editing scope |
 | An area outside the current editor's content | Closes the current editor and returns to the parent scope |
+
+Holding `Alt` suppresses all of these. Two `Alt` + clicks in quick succession are a step through the
+parent chain, not a request to open an editor, so they never navigate by accident.
 
 ## Edit a UserControl from the Canvas
 
