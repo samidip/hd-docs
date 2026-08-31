@@ -55,7 +55,7 @@ To select a control or layout element, click it directly on the **Canvas**. The 
 ![Canvas Selection](Assets/canvas-selection.png)
 
 - Clicking an element that is **already selected** keeps it selected in preference to others under the pointer.
-- Hold `Alt` and click to pick a **parent**. The first click selects the element under the pointer; each further click steps one level outward through its parents, crossing into the surrounding user controls and templates as it goes, and the step after the outermost returns to where you started. Keep clicking until the outline is around what you meant — overshooting costs one more click, not a restart.
+- Hold `Alt` and click to pick a **parent**. The first click selects the element under the pointer; each further click steps one level outward through its parents, crossing into the surrounding user controls and templates as it goes, and the step after the outermost returns to where you started. Keep clicking until the outline is around what you meant — overshooting costs one more click, not a restart. While you cycle, the element the gesture has reached is drawn with the **selection** outline rather than the hover one, so it is easy to tell apart from whatever the pointer happens to be over.
 - Press `Esc` to clear the selection. With nothing selected, `Esc` steps out of the editor you are in, so pressing it repeatedly walks back out of a nested drill-in.
 - The **middle mouse button** never changes the selection — it is reserved for panning.
 - Regions with no selectable element — generated template content with no XAML identity, for example — leave the selection unchanged.
