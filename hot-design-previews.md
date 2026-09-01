@@ -198,6 +198,10 @@ Some framework controls render blank with no content. When one of those is shown
 
 A preview you authored yourself renders exactly what you declared, with no placeholder injection.
 
+## Using Previews for Page State
+
+Modern apps often have pages/views in various states based on application data context. A page might display of list of things under regular scenarios, but could also have modes to show an empty list or an error state. Previews can be particularly useful in wiring up and checking the same app view across different states. Previews can be duplicated and bound to empty collections as data context - such view models can be added in code and wired up visually. In future, Uno Platform Studio will look to automate mock data for given data collections through source code generation, making it trivial to use Previews to test various app states for a given page.
+
 ## Defining previews in code
 
 Previews live in your project, in the folder named by the `HotDesignPreviewsFolder` MSBuild property (`Previews/` by default). Each hand-authored preview is a two-file unit: a XAML file whose root is `<hd:Preview>`, plus its code-behind decorated with the `[Preview]` attribute.
